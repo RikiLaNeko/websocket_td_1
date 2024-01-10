@@ -17,7 +17,6 @@ class Connexion(url: String, username: String, password: String) {
         }
         try {
             conn = DriverManager.getConnection(URL, USERNAME, PASSWORD)
-            println("connexion OK")
         } catch (ex: SQLException) {
             println("erreur de connexion à la bdd")
         }

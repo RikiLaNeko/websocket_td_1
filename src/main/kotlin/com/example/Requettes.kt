@@ -9,7 +9,7 @@ class Requettes {
     fun getValeur(id:Int): Valeur? {
         var laConnexion = Gestion().laConnexion
         var valeur: Valeur? = null
-        var prepStatement = laConnexion.getConnexion()
+        var prepStatement = laConnexion.getConnexion()!!
             .prepareStatement("select * from valeurs where id=?")
         prepStatement.setInt(1,id)
         var rs = prepStatement.executeQuery()
